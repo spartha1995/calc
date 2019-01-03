@@ -1,0 +1,66 @@
+<div class="calculator-container">
+  <!--<div class="row top-buffer">
+    <div class="col-md-4">
+      <div class="alert alert-warning" role="alert">{{result}}</div>
+    </div>
+  </div>-->
+  <div class="calculator-box">
+  <div class="row m0">
+    <div class="col-md-12 p2">
+      <input type="text" class="form-control" [(ngModel)]="calculatedValue" decimalOnly="true"/>
+    </div>
+  </div>
+  <div class="calculator-content" *ngIf="isCalcOpen">
+   <div class="row m0 top-buffer">
+    <div class="col-md-12 p2">
+      <input readonly [(ngModel)]="operation" type="text" class="form-control result-container"/>
+    </div>
+  </div>
+  <div class="row m0 top-buffer">
+    <div class="col-md-3 p2"><button (click)="append('7')" class="btn btn-default btn-block">7</button></div>
+    <div class="col-md-3 p2"><button (click)="append('8')" class="btn btn-default btn-block">8</button></div>
+    <div class="col-md-3 p2"><button (click)="append('9')" class="btn btn-default btn-block">9</button></div>
+    <div class="col-md-3 p2"><button (click)="append('+')" class="btn btn-default btn-block">+</button></div>
+  </div>
+  <div class="row m0 top-buffer">
+    <div class="col-md-3 p2"><button (click)="append('4')" class="btn btn-default btn-block">4</button></div>
+    <div class="col-md-3 p2"><button (click)="append('5')" class="btn btn-default btn-block">5</button></div>
+    <div class="col-md-3 p2"><button (click)="append('6')" class="btn btn-default btn-block">6</button></div>
+    <div class="col-md-3 p2"><button (click)="append('-')" class="btn btn-default btn-block">-</button></div>
+  </div>
+  <div class="row m0 top-buffer">
+    <div class="col-md-3 p2"><button (click)="append('1')" class="btn btn-default btn-block">1</button></div>
+    <div class="col-md-3 p2"><button (click)="append('2')" class="btn btn-default btn-block">2</button></div>
+    <div class="col-md-3 p2"><button (click)="append('3')" class="btn btn-default btn-block">3</button></div>
+    <div class="col-md-3 p2"><button (click)="append('*')" class="btn btn-default btn-block">X</button></div>
+  </div>
+
+  <div class="row m0 top-buffer">
+    <div class="col-md-3 p2"><button (click)="append('0')" class="btn btn-default btn-block">0</button></div>
+    <div class="col-md-3 p2"><button (click)="append('.')" class="btn btn-default btn-block">
+        .
+      </button>
+    </div>
+  <div class="col-md-6 p2"><button (click)="evaluate()" class="btn btn-default btn-block">=</button></div>
+   </div>
+
+  <div class="row m0 top-buffer">
+    <div class="col-md-4 pd">
+      <button (click)="closeCalculator()" class="btn btn-default btn-block action-btn">
+       Close
+      </button>
+    </div>
+     <div class="col-md-4 pd">
+      <button class="btn btn-default btn-block action-btn" (click)="CalcUseButtonPressed()">
+       Use
+      </button>
+    </div>
+    <div class="col-md-4 pd">
+      <button (click)="clear()" class="btn btn-default btn-block action-btn">
+       Clear
+      </button>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
